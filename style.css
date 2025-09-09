@@ -1,0 +1,33 @@
+.banner {
+  position: relative;
+  background-color: #d1fae5;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Left Leaf */
+.banner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 380px;
+  height: 540px;
+  background: url("./assets/hero-leaf1.png") no-repeat center/contain;
+}
+
+/* Right Leaf */
+.banner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 380px;
+  height: 540px;
+  background: url("./assets/hero-leaf2.png") no-repeat center/contain;
+}
+.content-image{
+  margin: auto;
+}
