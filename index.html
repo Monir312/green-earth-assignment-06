@@ -10,7 +10,6 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -61,9 +60,60 @@
   </section>
 
 
+  <!-- product section-->
+  <section class="product bg-[#F0FDF4]">
+    <div class="max-w-7xl mx-auto py-10 px-4 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+        Choose Your Trees
+      </h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Categories -->
+        <aside class="lg:col-span-2">
+          <div id="categories">
+            <h3 class="font-semibold mb-4 text-gray-700">Categories</h3>
+            <ul id="categories-list-item" class="categories-list-item">
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <main id="product-item" class=" lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+
+          <div id="spinner" class="absolute inset-0 flex justify-center top-90 left-5 items-center z-50 hidden">
+            <div class="w-1 h-1 bg-black  rounded-full animate-bounce"></div>
+            <div class="w-1 h-1 ml-2 mr-2 bg-black rounded-full animate-bounce [animation-delay:-0.2s]"></div>
+            <div class="w-1 h-1 bg-black  rounded-full animate-bounce [animation-delay:-0.4s]"></div>
+          </div>
+
+
+
+        </main>
+        <!-- Modal -->
+        <div id="plant-modal" style="background-color: rgba(0,0,0,0.5);"
+          class="fixed inset-0 hidden items-center justify-center pb-10 bg-opacity-1 z-50">
+          <div class="bg-white rounded-lg p-6 max-w-md w-full relative">
+
+          </div>
+        </div>
+
+        <!-- Cart Section -->
+        <aside class="lg:col-span-3 bg-white shadow-md rounded-lg p-6 h-100%">
+          <h3 class="text-lg font-semibold mb-4">Your Cart</h3>
+          <div id="cart-container" class=" rounded-lg"></div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
   <!-- About Section -->
-  <section class="about bg-[#d6dfd8] py-10">
-    <h2 class="text-xl md:text-2xl text-center font-semibold py-4">About the Campaign</h2>
+  <section class="about bg-[#F0FDF4] py-10">
+    <h2 class="text-xl md:text-2xl text-center font-semibold py-6">About the Campaign</h2>
 
     <div class="content-image max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 px-4 max-w-[960px]">
 
@@ -119,7 +169,7 @@
   <section class="bg-[#166534] py-16 px-6">
     <h2 class="text-white text-xl font-semibold text-center mb-3">Plant a Tree Today</h2>
     <div class="max-w-md mx-auto bg-[#15803D] p-8 rounded-xl shadow-lg">
-    
+
       <form class="space-y-4">
         <input type="text" placeholder="Your Name"
           class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white">
